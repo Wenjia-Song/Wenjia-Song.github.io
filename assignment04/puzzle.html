@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+            <div id='sidebar'>
+                <form id='game'>
+                    <div class='form-group'>
+                        <label>
+                            Input X:
+                        </label>
+                        <input type='var' name='X'>
+                    </div>
+                    <div class='form-group'> 
+                    <label>
+                        Input Y:
+                    </label>
+                    <input type='var' name='Y'>
+                    </div>
+                    <button id='submitBtn' type='submit'>Send</button>
+                </form>
+                </div>
+    <script>
+        function sayHello() {
+         var X = document.forms[0].X.value;
+         var Y = document.forms[0].Y.value;
+         var Z = X + Y
+         alert("Hello! Your result is " + Z + '.');
+        }
+        document.getElementById('submitBtn').addEventListener('click', sayHello);
+    </script>
+</body>
+</html>
