@@ -2,7 +2,7 @@
 	
 	#menu, #menu ul {
 		margin: 0;
-		padding: 12px 0;
+		padding: 15px 0;
 		list-style: none;
 		
 	}
@@ -34,7 +34,7 @@
 	
 	#menu a {
 		float: left;
-		padding: 12px 20px;
+		padding: 10px 25px;
 		color: #fff;
 		text-transform: uppercase;
 		font: bold 12px Arial, Helvetica;
@@ -60,7 +60,7 @@
 		top: 38px;
 		left: 0;
 		z-index: 1;    
-		background:#2B2D3F;
+		background: #2B2D3F;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
 		-ms-transition: all .2s ease-in-out;
@@ -76,13 +76,13 @@
 	
 	#menu ul ul {
 		top: 0;
-		left: 150px;
+		left: 120px;
 		margin: 0 0 0 20px;
 		_margin: 0; /*IE6 only*/
 	}
 	
 	#menu ul li {
-		float: none;
+		float: center;
 		display: block;
 		border: 0;
 	}
@@ -95,7 +95,7 @@
 	
 	#menu ul a {    
 		padding: 10px;
-		width: 130px;
+		width: 100px;
 		_height: 10px; /*IE6 only*/
 		display: block;
 		white-space: nowrap;
@@ -127,13 +127,15 @@
 		left: -6px;
 		top: 50%;
 		margin-top: -6px;
-		border-left: 0;	
+		border-left: 2px;	
 		border-bottom: 6px solid transparent;
 		border-top: 6px solid transparent;
-		border-right: 6px solid #2B2D3F;
+		border-right: 4px solid #2B2D3F;
 	}
 	
-
+	#menu ul li:first-child a:hover:after {
+		 
+	}
 	
 	#menu ul ul li:first-child a:hover:after {
 		border-right-color: #EC495E; 
@@ -141,9 +143,9 @@
 	}
 	
 	#menu ul li:last-child > a {
-		-moz-border-radius: 0 0 3px 3px;
-		-webkit-border-radius: 0 0 3px 3px;
-		border-radius: 0 0 3px 3px;
+		-moz-border-radius: 0 0 0px 0px;
+		-webkit-border-radius: 0 0 0px 0px;
+		border-radius: 0 0 0px 0px;
 	}
 	
 	/* Mobile */
