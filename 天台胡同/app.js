@@ -2,7 +2,7 @@ var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.pn
 //  var mapboxTiles = L.tileLayer.grayscale
 var map = L.map('map')
    .addLayer(mapboxTiles)
-   .setView([39.90930665978423, 116.39760353755604], 13);
+   .setView([39.92,116.40], 13);
 
  layerGroup = L.layerGroup().addTo(map);
 
@@ -60,7 +60,7 @@ function place_marker() {
     place = parseInt(filter.value);
     var latlng = L.latLng({ lat: data[place].latitud, lng: data[place].longitud });
     L.marker( latlng )
-      .bindPopup( '<a href="' + data[place].url + '" target="_blank">' + '<img src="' + data[place].image_url+'" width = "80px"><br>'+data[place].name + '</a>' )    
+      .bindPopup( '<img src="' + data[place].image_url+'" width = "80px"><br>'+data[place].name)    
       .addTo(layerGroup);
     /* 
     var marker =  L.marker( data[place].lat, data[place].lng)
@@ -74,7 +74,7 @@ function show_districts(){
   for (var i in data) {
       var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng )
-          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
+          .bindPopup('<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name)
           .addTo(layerGroup);
   }
 }

@@ -42,7 +42,7 @@ Version : 3.0
 .zerogrid .col-1-5,.zerogrid .col-1-5-fixed{width:20%;}
 .zerogrid .col-2-5,.zerogrid .col-2-5-fixed{width:40%;}
 .zerogrid .col-3-5,.zerogrid .col-3-5-fixed{width:60%;}
-.zerogrid .col-4-5,.zerogrid .col-4-5-fixed{width:80%;}
+.zerogrid .col-4-5,.zerogrid .col-4-5-fixed{background:white;width:80%;}
 .zerogrid .offset-1-5{margin-left: 20%;}
 .zerogrid .offset-2-5{margin-left: 40%;}
 .zerogrid .offset-3-5{margin-left: 60%;}

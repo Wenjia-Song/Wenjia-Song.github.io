@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-5FXFJ6H');</script>
-	<!-- End Google Tag Manager -->
-
-    <!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>天台胡同</title>
-	<meta name="description" content="Free Responsive Html5 Css3 Templates">
-	<meta name="author" content="">
+     <!-- Google Tag Manager -->
+	 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5FXFJ6H');</script>
+		<!-- End Google Tag Manager -->
 	
-    <!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!-- CSS
-  ================================================== -->
-  	<link rel="stylesheet" href="css/zerogrid.css">
-	<link rel="stylesheet" href="css/menu.css">
-	<link rel="stylesheet" href="css/style.css">
+		<!-- Basic Page Needs
+	  ================================================== -->
+		<meta charset="utf-8">
+		<title>天台胡同</title>
+		<meta name="description" content="Free Responsive Html5 Css3 Templates">
+		<meta name="author" content="">
+		
+		<!-- Mobile Specific Metas
+	  ================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- CSS
+	  ================================================== -->
+		  <link rel="stylesheet" href="css/zerogrid.css">
+		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/style.css">
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+		<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+		</script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.11/c3.min.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.11/c3.min.js"></script>
+		<script src="TileLayer.Grayscale.js"></script>
     
 </head>
 <body>
@@ -102,21 +114,43 @@
 			<div class="heading">
 				<div class="row">
 					<h2>美食地图</h2>
-					<div class="row">
-					</div>
-				</div>
+					<br>
+					<form>
+						<div class="form-group">
+							<select id="filter" class="form-control form-control-sm" style="width:auto; display:inline;" onchange="place_marker()">
+							  <option value="" selected disabled>请选择</option>
+							  <option value="0">静默咖啡Silence Coffee（有戏酒店）</option>
+							  <option value="1">致璞</option>
+							  <option value="2">熊煮咖啡BearBrew（自在场头店）</option>
+							  <option value="3">候鸟咖啡</option>
+							  <option value="4">静水StillWater</option>
+							  <option value="5">福叁咖啡（西兴隆街店）</option>
+							  <option value="6">ty.cafe& space</option>
+							  <option value="7">postpost</option>
+							  <option value="8">Soloist Coffee Co（杨梅竹店）</option>
+							  <option value="9">Berry Beans</option>
+							  <option value="10">济安斋咖啡书吧</option>
+							  <option value="11">糖房咖啡</option>
+							  <option value="12">苦尽咖啡</option>
+							  <option value="13">iams House 新太仓店</option>
+							  <option value="14">莲COFFEE&T</option>
+							  <option value="15">The Bake Shop（南锣店）</option>
+							</select>
+							<button type="button" class="btn btn-outline-primary btn-sm" id='roll_up' onclick="show_districts();" style="border-width: 1px;border-style: solid;border-color: #327ab7;">地点</button>
+							<button type="button" class="btn btn-outline-primary btn-sm" id="roll_up" onclick="clear_map();" style="
+								border-style: solid;
+								border-width: 1px;
+								border-color: #327ab7;
+							">重置</button>
+					    </div>           
+				    </form>  
+			    </div>
 			</div>
-		</div>
+		    <div id="map" style="width: 100%; height: 500px"></div>
+			<br>
+	    </div>
 	</div>
 </section>
-
-<!-----------------content-box-2-------------------->
-	<section class="content-box boxstyle-2 box-2">
-		<div class="zerogrid" style="width: 100%;">
-			<div class="row wrap-box">
-			</div>
-		</div>
-	</section>
 
 <!--////////////////////////////////////Footer-->
 <footer>
@@ -172,6 +206,7 @@
 			if (isiPad) $('#menu ul').addClass('no-transition');      
 		});          
 	</script>
+	<script type="text/javascript" language="javascript" src="app.js"></script>
 	
 </div>
 </body></html>

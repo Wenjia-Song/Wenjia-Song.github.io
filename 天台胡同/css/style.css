@@ -117,7 +117,7 @@ header .main-header{text-align: center;padding-top: 100px}
 
 .content-box.boxstyle-1{background:#fff; color: #333;}
 .content-box.boxstyle-2{background: #222 url(../images/subscribe_bg.jpg);color: #fff;}
-.content-box.boxstyle-3{background: #222 url(../images/bg3.jpg) fixed;color: #fff;}
+.content-box.boxstyle-3{background: white}
 
 .content-box.box-1 h1{font-size: 38px;color: #333;line-height: 1.2;margin-bottom: 30px;}
 .content-box.box-1 span{color: #ec495e;font-size: 52px;}
