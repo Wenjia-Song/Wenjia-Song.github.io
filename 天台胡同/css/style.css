@@ -83,7 +83,7 @@ body {background: white;color: #3F3F3F;font: 14px/25px Arial;font-family: 'Robot
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Header--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-header{background: url(../images/showcase_bg.jpg) no-repeat center top;color:#fff;min-height: 700px;background-size: cover;}
+header{background: url(../images/showcase_bg.jpg) no-repeat center top;color:#fff;min-height: 750px;background-size: cover;}
 header.sub-header{background:#1D2027;min-height: 120px;}
 header .main-header{text-align: center;padding-top: 100px}
 
